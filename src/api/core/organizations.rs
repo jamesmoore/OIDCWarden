@@ -821,7 +821,8 @@ async fn get_org_domain_sso_details(data: Json<OrgDomainDetails>, mut conn: DbCo
 
     Ok(Json(json!({
         "organizationIdentifier": identifier,
-        "ssoAvailable": CONFIG.sso_enabled()
+        "ssoAvailable": CONFIG.sso_enabled(),
+        "verifiedDate": "2024-01-01T00:00:00"
     })))
 }
 
